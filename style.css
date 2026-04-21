@@ -6,26 +6,17 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  scroll-behavior: smooth;
-}
-
-/* NAVBAR */
+/* NAVBAR (all pages) */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 50px;
   background: rgba(255,255,255,0.25);
   backdrop-filter: blur(10px);
   z-index: 1000;
-}
-
-nav h1 {
-  font-size: 20px;
 }
 
 nav ul {
@@ -37,39 +28,9 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
 }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  background: 
-    linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
-    url('airbnb.jpg') center/cover no-repeat;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  padding: 0 20px;
-
-  /* moves text higher (adjust if needed) */
-  transform: translateY(-70px);
-}
-
-.hero h2 {
-  font-size: 48px;
-  max-width: 900px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 20px;
-}
-
-/* PAGE CONTENT */
+/* PAGE LAYOUT (non-home pages) */
 .page {
   padding: 120px 50px;
   min-height: 100vh;
