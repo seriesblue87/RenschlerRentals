@@ -1,138 +1,53 @@
-/* ================= NAV BASE ================= */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #111;
+}
+
+/* NAVBAR */
 nav {
-  position: fixed;
-  top: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
+  background: #111;
+  padding: 15px 30px;
 }
 
-nav h1 {
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-
-/* DESKTOP MENU */
-nav ul {
-  display: flex;
-  gap: 25px;
+/* NAV LIST */
+#nav-links {
   list-style: none;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-/* HAMBURGER HIDDEN ON DESKTOP */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
-
-/* ================= HERO ================= */
-.hero {
-  height: 80vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
+  gap: 30px;
 }
 
-.hero-content h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  opacity: 0.8;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: white;
-  color: black;
+/* NAV LINKS */
+#nav-links li a {
+  color: white;
   text-decoration: none;
-  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.2s;
 }
 
-/* ================= VALUE SECTION ================= */
-.value {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 60px 20px;
-  flex-wrap: wrap;
+#nav-links li a:hover {
+  color: #aaa;
 }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
+/* REMOVE HAMBURGER COMPLETELY */
+.menu-toggle {
+  display: none !important;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 30px;
-  opacity: 0.6;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 600px) {
-
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  /* HIDE MENU INITIALLY */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.9);
-    text-align: center;
-    padding: 20px 0;
-    gap: 15px;
-  }
-
-  /* SHOW MENU WHEN ACTIVE */
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li {
-    padding: 10px 0;
-  }
-
-  .hero-content h1 {
-    font-size: 28px;
-  }
-
-  .value {
-    flex-direction: column;
-    align-items: center;
-  }
+/* PAGE CONTENT */
+.container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
 }
