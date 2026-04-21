@@ -1,6 +1,4 @@
-/* =========================
-   NAV BASE (DESKTOP)
-   ========================= */
+/* ================= NAV BASE ================= */
 nav {
   position: fixed;
   top: 0;
@@ -29,11 +27,10 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
   opacity: 0.8;
 }
 
-/* HAMBURGER (hidden on desktop) */
+/* HAMBURGER HIDDEN ON DESKTOP */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -41,9 +38,7 @@ nav ul li a {
   color: white;
 }
 
-/* =========================
-   MOBILE FIX
-   ========================= */
+/* ================= MOBILE ================= */
 @media (max-width: 600px) {
 
   nav {
@@ -57,7 +52,7 @@ nav ul li a {
     margin-top: 10px;
   }
 
-  /* IMPORTANT: hide menu by default */
+  /* FORCE HIDE MENU INITIALLY */
   nav ul {
     display: none;
     flex-direction: column;
@@ -67,7 +62,7 @@ nav ul li a {
     gap: 15px;
   }
 
-  /* SHOW menu when toggled */
+  /* SHOW WHEN ACTIVE */
   nav ul.active {
     display: flex;
   }
