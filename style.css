@@ -6,10 +6,11 @@
   font-family: "Arial", sans-serif;
 }
 
+/* FIX: prevents navbar overlap on ALL pages */
 body {
   background: #0f0f0f;
   color: white;
-  padding-top: 80px; /* prevents fixed nav overlap */
+  padding-top: 80px;
 }
 
 /* =========================
@@ -53,7 +54,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   HERO (DESKTOP)
+   HERO
    ========================= */
 .hero {
   height: 100vh;
@@ -98,6 +99,13 @@ nav ul li a:hover {
 .btn:hover {
   background: white;
   color: black;
+}
+
+/* =========================
+   PAGE SPACING FIX (DESKTOP)
+   ========================= */
+.page {
+  padding: 120px 60px 60px;
 }
 
 /* =========================
@@ -187,7 +195,7 @@ footer {
     white-space: nowrap;
   }
 
-  /* HERO FIX (THIS IS YOUR FIXED PART) */
+  /* HERO MOBILE FIX */
   .hero h1 {
     font-size: 28px;
     letter-spacing: 1px;
@@ -196,6 +204,11 @@ footer {
   .hero p {
     font-size: 14px;
     padding: 0 10px;
+  }
+
+  /* PAGE MOBILE FIX */
+  .page {
+    padding: 100px 20px;
   }
 
   /* VALUE */
