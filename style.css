@@ -12,7 +12,7 @@ body {
 }
 
 /* =========================
-   NAV (FIXED - ALL PAGES)
+   NAV (DESKTOP)
    ========================= */
 nav {
   position: fixed;
@@ -32,6 +32,7 @@ nav h1 {
   letter-spacing: 2px;
 }
 
+/* NAV LINKS */
 nav ul {
   display: flex;
   gap: 25px;
@@ -51,8 +52,16 @@ nav ul li a:hover {
   opacity: 1;
 }
 
+/* HAMBURGER ICON (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
 /* =========================
-   HERO (HOME PAGE ONLY)
+   HERO (HOME)
    ========================= */
 .hero {
   height: 100vh;
@@ -100,15 +109,13 @@ nav ul li a:hover {
 }
 
 /* =========================
-   PAGE CONTENT (OTHER PAGES)
+   PAGE SECTIONS
    ========================= */
 .page {
   padding: 120px 60px 60px;
 }
 
-/* =========================
-   VALUE SECTION (HOME)
-   ========================= */
+/* VALUE SECTION */
 .value {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -143,7 +150,7 @@ footer {
 }
 
 /* =========================
-   TABLET (≤900px)
+   TABLET
    ========================= */
 @media (max-width: 900px) {
 
@@ -162,11 +169,11 @@ footer {
 }
 
 /* =========================
-   MOBILE (≤600px iPhone)
+   MOBILE (HAMBURGER MENU)
    ========================= */
 @media (max-width: 600px) {
 
-  /* NAV STACK */
+  /* NAV LAYOUT */
   nav {
     flex-direction: column;
     align-items: center;
@@ -178,10 +185,28 @@ footer {
     margin-bottom: 10px;
   }
 
+  /* SHOW HAMBURGER */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* HIDE MENU BY DEFAULT */
   nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+
+  /* SHOW MENU WHEN ACTIVE */
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 0;
   }
 
   nav ul li a {
