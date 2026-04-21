@@ -6,15 +6,13 @@
   font-family: "Arial", sans-serif;
 }
 
-/* FIX: prevents navbar overlap on ALL pages */
 body {
   background: #0f0f0f;
   color: white;
-  padding-top: 80px;
 }
 
 /* =========================
-   NAV (DESKTOP)
+   NAV (FIXED - ALL PAGES)
    ========================= */
 nav {
   position: fixed;
@@ -54,7 +52,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   HERO
+   HERO (HOME PAGE ONLY)
    ========================= */
 .hero {
   height: 100vh;
@@ -102,14 +100,14 @@ nav ul li a:hover {
 }
 
 /* =========================
-   PAGE SPACING FIX (DESKTOP)
+   PAGE CONTENT (OTHER PAGES)
    ========================= */
 .page {
   padding: 120px 60px 60px;
 }
 
 /* =========================
-   VALUE SECTION
+   VALUE SECTION (HOME)
    ========================= */
 .value {
   display: grid;
@@ -168,10 +166,6 @@ footer {
    ========================= */
 @media (max-width: 600px) {
 
-  body {
-    padding-top: 110px;
-  }
-
   /* NAV STACK */
   nav {
     flex-direction: column;
@@ -195,7 +189,7 @@ footer {
     white-space: nowrap;
   }
 
-  /* HERO MOBILE FIX */
+  /* HERO */
   .hero h1 {
     font-size: 28px;
     letter-spacing: 1px;
@@ -206,7 +200,7 @@ footer {
     padding: 0 10px;
   }
 
-  /* PAGE MOBILE FIX */
+  /* PAGE */
   .page {
     padding: 100px 20px;
   }
