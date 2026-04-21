@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renschler Rentals</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background: url('your-image.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: black;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 50px;
+      min-height: 100vh;
+    }
+
+    .section-light {
+      background: #f5f5f5;
+    }
+
+    .section-dark {
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>Renschler Rentals</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#consultation">Consultation</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div id="home" class="hero">
+    <h2>We help property owners turn their homes into high-performing Airbnbs</h2>
+    <p>Effortless hosting. Maximum returns.</p>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-light">
+    <h2>About</h2>
+    <p>Describe your business here.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section-dark">
+    <h2>Services</h2>
+    <p>Explain what you offer.</p>
+  </section>
+
+  <!-- CONSULTATION -->
+  <section id="consultation" class="section-light">
+    <h2>Consultation</h2>
+    <p>Explain booking or contact process.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section-dark">
+    <h2>Gallery</h2>
+    <p>Add images of properties here.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-light">
+    <h2>Contact</h2>
+    <p>Email, phone, or form here.</p>
+  </section>
+
+</body>
+</html>
