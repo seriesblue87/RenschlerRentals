@@ -1,3 +1,17 @@
+/* ================= GENERAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: #111;
+  padding-top: 80px; /* prevents fixed nav overlap */
+}
+
 /* ================= NAV BASE ================= */
 nav {
   position: fixed;
@@ -28,46 +42,116 @@ nav ul li a {
   color: white;
   text-decoration: none;
   opacity: 0.8;
+  transition: 0.2s ease;
 }
 
-/* HAMBURGER HIDDEN ON DESKTOP */
+nav ul li a:hover {
+  opacity: 1;
+}
+
+/* HAMBURGER (hidden on desktop) */
 .menu-toggle {
   display: none;
   font-size: 28px;
   cursor: pointer;
   color: white;
+  background: none;
+  border: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ================= VALUE SECTION ================= */
+.value {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 600px) {
 
   nav {
-    flex-direction: column;
-    align-items: center;
     padding: 15px 20px;
   }
 
   .menu-toggle {
     display: block;
-    margin-top: 10px;
   }
 
-  /* FORCE HIDE MENU INITIALLY */
+  /* hide menu by default on mobile */
   nav ul {
     display: none;
     flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
+    background: rgba(0,0,0,0.9);
     text-align: center;
-    margin-top: 15px;
+    padding: 20px 0;
     gap: 15px;
   }
 
-  /* SHOW WHEN ACTIVE */
+  /* show menu when active */
   nav ul.active {
     display: flex;
   }
 
   nav ul li {
     padding: 10px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .value {
+    flex-direction: column;
+    align-items: center;
   }
 }
