@@ -1,8 +1,29 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* PAGE LAYOUT FIX (removes footer gaps) */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR (same everywhere) */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,13 +36,11 @@ nav {
   z-index: 1000;
 }
 
-/* company name */
 nav h1 {
   font-size: 20px;
   color: black;
 }
 
-/* links */
 nav ul {
   list-style: none;
   display: flex;
@@ -32,10 +51,50 @@ nav ul li a {
   text-decoration: none;
   color: black;
   font-weight: 500;
-  transition: 0.2s;
 }
 
-/* hover effect */
 nav ul li a:hover {
   opacity: 0.6;
+}
+
+/* MAIN CONTENT AREA */
+.page {
+  padding: 120px 50px;
+  flex: 1;
+}
+
+/* FOOTER FIX (no whitespace) */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+  margin-top: auto;
+}
+
+/* HOMEPAGE HERO ONLY (NO GLOBAL IMAGE) */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+    url('airbnb.jpg') center/cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  transform: translateY(-80px);
+  max-width: 900px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
 }
