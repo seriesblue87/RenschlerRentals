@@ -1,100 +1,143 @@
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
-html, body {
-  height: 100%;
-}
-
-/* PAGE LAYOUT FIX (removes footer gaps) */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background: #0f0f0f;
+  color: white;
 }
 
-/* NAVBAR (same everywhere) */
+/* NAV */
 nav {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding: 20px 50px;
-
-  background: rgba(255,255,255,0.25);
+  padding: 20px 60px;
+  background: rgba(0,0,0,0.4);
   backdrop-filter: blur(10px);
-
   z-index: 1000;
 }
 
 nav h1 {
-  font-size: 20px;
-  color: black;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   gap: 25px;
+  list-style: none;
 }
 
 nav ul li a {
+  color: white;
   text-decoration: none;
-  color: black;
-  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.8;
 }
 
 nav ul li a:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
-/* MAIN CONTENT AREA */
-.page {
-  padding: 120px 50px;
-  flex: 1;
-}
-
-/* FOOTER FIX (no whitespace) */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: white;
-  margin-top: auto;
-}
-
-/* HOMEPAGE HERO ONLY (NO GLOBAL IMAGE) */
+/* HERO */
 .hero {
   height: 100vh;
   background:
-    linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('airbnb.jpg') center/cover no-repeat;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .hero-content {
-  transform: translateY(-80px);
-  max-width: 900px;
+  max-width: 800px;
 }
 
-.hero h2 {
-  font-size: 48px;
-  margin-bottom: 15px;
+.hero h1 {
+  font-size: 54px;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .hero p {
-  font-size: 20px;
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* VALUE SECTION */
+.value {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 100px 60px;
+  gap: 30px;
+  background: #111;
+}
+
+.card {
+  padding: 30px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.card p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: black;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .value {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
 }
