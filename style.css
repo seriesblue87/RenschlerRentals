@@ -1,24 +1,25 @@
 /* =========================================
-   1. GLOBAL SETTINGS
+   1. GLOBAL & RESET
    ========================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
   background: #0f0f0f;
   color: white;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* =========================================
-   2. COMPONENTS (Shared across all pages)
-   ========================================= */
+img { max-width: 100%; height: auto; display: block; }
 
-/* Navigation */
+/* =========================================
+   2. NAVIGATION & HAMBURGER
+   ========================================= */
 nav {
   position: fixed;
   top: 0;
@@ -26,20 +27,34 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: rgba(0,0,0,0.4);
+  padding: 20px 5%;
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-nav h1 {
-  font-size: 18px;
-  letter-spacing: 2px;
+nav h1 { font-size: 1.2rem; letter-spacing: 1px; }
+
+.menu-toggle { display: none; }
+
+.hamburger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
 }
 
 nav ul {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   list-style: none;
 }
 
@@ -47,110 +62,105 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 14px;
-  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
   transition: 0.3s;
 }
 
-nav ul li a:hover {
-  opacity: 1;
-}
+nav ul li a:hover { opacity: 1; }
 
-/* Buttons */
+/* =========================================
+   3. REUSABLE COMPONENTS
+   ========================================= */
+.section-padding { padding: 100px 5%; }
+
 .btn {
   display: inline-block;
-  margin-top: 30px;
-  padding: 12px 25px;
+  padding: 12px 30px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
+  font-size: 14px;
   transition: 0.3s;
+  margin-top: 20px;
 }
 
-.btn:hover {
-  background: white;
-  color: black;
-}
+.btn:hover { background: white; color: black; }
 
-/* Common Page Padding (for non-hero pages) */
-.page {
-  padding: 150px 60px 80px;
-  min-height: 80vh;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 40px 25px;
-  background: black;
-  font-size: 12px;
-  opacity: 0.6;
-}
-
-/* =========================================
-   3. HOME PAGE STYLES
-   ========================================= */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('airbnb.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero h1 { font-size: 54px; font-weight: 300; }
-.hero p { margin-top: 15px; font-size: 18px; opacity: 0.8; }
-
-.value {
+.grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 100px 60px;
   gap: 30px;
-  background: #111;
 }
 
 .card {
-  padding: 30px;
   background: #1a1a1a;
-  border: 1px solid rgba(255,255,255,0.1);
+  padding: 40px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  background: #000;
+  font-size: 12px;
+  opacity: 0.5;
 }
 
 /* =========================================
-   4. SERVICES PAGE STYLES
+   4. PAGE SPECIFIC STYLES
    ========================================= */
-.services-content { padding-top: 80px; }
-
-.sp-hero {
-  height: 80vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('mountain.jpg') center/cover no-repeat;
+.hero {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('airbnb.jpg') center/cover no-repeat;
   padding: 0 20px;
 }
 
-.sp-hero h1 { font-size: 48px; max-width: 900px; margin-bottom: 20px; }
+.hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 300; }
+.hero p { font-size: 1.1rem; opacity: 0.8; margin-top: 15px; }
 
-.sp-section { padding: 60px 10%; background: #0f0f0f; }
-.sp-card { background: #1a1a1a; padding: 40px; border-radius: 4px; }
-.sp-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 20px; 
-  margin-top: 30px; 
+/* For Subpages */
+.subpage-header {
+  padding: 180px 5% 60px;
+  text-align: center;
+  background: #111;
 }
-.sp-item { background: #222; padding: 15px; border-left: 3px solid white; }
 
 /* =========================================
-   5. RESPONSIVE DESIGN
+   5. RESPONSIVE QUERIES
    ========================================= */
 @media (max-width: 900px) {
-  nav { padding: 20px; flex-direction: column; gap: 15px; }
-  .value, .sp-grid { grid-template-columns: 1fr; }
-  .hero h1, .sp-hero h1 { font-size: 32px; }
-  .page { padding: 120px 20px; }
+  .hamburger { display: flex; }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: #000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-toggle:checked ~ ul { right: 0; }
+
+  /* Hamburger Animation */
+  .menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+  .menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .grid-3 { grid-template-columns: 1fr; }
+  
+  .section-padding { padding: 60px 5%; }
 }
