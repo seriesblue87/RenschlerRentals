@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Renschler Rentals</title>
+    <title>Gallery | Renschler Rentals LLC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
     <h1>Renschler Rentals LLC</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+    </label>
     <ul>
-        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="consultation.html">Consultation</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -19,18 +23,36 @@
     </ul>
 </nav>
 
-<main class="page">
-    <h1>Our Managed Properties</h1>
-    <p>A look at the luxury standards we maintain across all listings.</p>
+<header class="subpage-header">
+    <h1>Our Portfolio</h1>
+    <p>Luxury standards maintained across every property.</p>
+</header>
 
-    <div class="sp-grid">
-        <div class="card"><img src="property1.jpg" alt="Airbnb Listing" style="width:100%;"></div>
-        <div class="card"><img src="property2.jpg" alt="Airbnb Listing" style="width:100%;"></div>
-        <div class="card"><img src="property3.jpg" alt="Airbnb Listing" style="width:100%;"></div>
+<section class="section-padding">
+    <div class="grid-3">
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <img src="property1.jpg" alt="Luxury Rental 1" style="width: 100%; transition: 0.5s;">
+            <div style="padding: 20px;">
+                <h4>Property Name/Location</h4>
+            </div>
+        </div>
+        
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <img src="property2.jpg" alt="Luxury Rental 2" style="width: 100%;">
+            <div style="padding: 20px;">
+                <h4>Property Name/Location</h4>
+            </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <img src="property3.jpg" alt="Luxury Rental 3" style="width: 100%;">
+            <div style="padding: 20px;">
+                <h4>Property Name/Location</h4>
+            </div>
+        </div>
     </div>
-</main>
+</section>
 
 <footer>© Renschler Rentals LLC 2026</footer>
-
 </body>
 </html>
