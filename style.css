@@ -107,7 +107,7 @@ footer {
 }
 
 .hero h1 { font-size: 54px; font-weight: 300; }
-.hero p { margin-top: 15px; font-size: 18px; opacity: 0.8; }
+.hero p { margin-top: -10px; font-size: 18px; opacity: 0.8; }
 
 .subpage-header {
   padding: 150px 60px 40px; /* Ensures content starts below Nav */
