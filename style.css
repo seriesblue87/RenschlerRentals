@@ -1,0 +1,156 @@
+/* =========================================
+   1. GLOBAL SETTINGS
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+  line-height: 1.6;
+}
+
+/* =========================================
+   2. COMPONENTS (Shared across all pages)
+   ========================================= */
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Common Page Padding (for non-hero pages) */
+.page {
+  padding: 150px 60px 80px;
+  min-height: 80vh;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 25px;
+  background: black;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* =========================================
+   3. HOME PAGE STYLES
+   ========================================= */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('airbnb.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 { font-size: 54px; font-weight: 300; }
+.hero p { margin-top: 15px; font-size: 18px; opacity: 0.8; }
+
+.value {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 100px 60px;
+  gap: 30px;
+  background: #111;
+}
+
+.card {
+  padding: 30px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* =========================================
+   4. SERVICES PAGE STYLES
+   ========================================= */
+.services-content { padding-top: 80px; }
+
+.sp-hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('mountain.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.sp-hero h1 { font-size: 48px; max-width: 900px; margin-bottom: 20px; }
+
+.sp-section { padding: 60px 10%; background: #0f0f0f; }
+.sp-card { background: #1a1a1a; padding: 40px; border-radius: 4px; }
+.sp-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px; 
+  margin-top: 30px; 
+}
+.sp-item { background: #222; padding: 15px; border-left: 3px solid white; }
+
+/* =========================================
+   5. RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 900px) {
+  nav { padding: 20px; flex-direction: column; gap: 15px; }
+  .value, .sp-grid { grid-template-columns: 1fr; }
+  .hero h1, .sp-hero h1 { font-size: 32px; }
+  .page { padding: 120px 20px; }
+}
