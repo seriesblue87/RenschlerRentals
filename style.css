@@ -133,8 +133,7 @@ footer {
 .services-page .sp-hero {
   height: 100vh;
 
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url('mountainhouse.png') center/cover no-repeat;
+  background: url('mountainhouse.png') center/cover no-repeat;
 
   display: flex;
   align-items: center;
