@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultation | Renschler Rentals</title>
+    <title>Consultation | Renschler Rentals LLC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
     <h1>Renschler Rentals LLC</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+    </label>
     <ul>
-        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="consultation.html">Consultation</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -19,27 +23,35 @@
     </ul>
 </nav>
 
-<main class="page">
-    <section class="sp-card">
-        <h1>Free Property Analysis</h1>
-        <p style="margin-top: 20px;">Book a call to see how much your property could earn. We provide a full revenue breakdown and optimization strategy.</p>
+<header class="subpage-header">
+    <h1>Free Property Analysis</h1>
+    <p>Let's find your property's true earning potential.</p>
+</header>
+
+<section class="section-padding">
+    <div class="card" style="max-width: 900px; margin: 0 auto; text-align: center;">
+        <h2>Ready to go passive?</h2>
+        <p style="margin-top: 20px; opacity: 0.8;">Book a free strategy call. I will analyze your local market, review your current occupancy (if applicable), and show you how we can maximize your monthly revenue.</p>
         
-        <div class="sp-grid">
-            <div class="sp-item">
-                <strong>Direct Line</strong>
-                <p>(484) 809-5253</p>
-                <a href="tel:4848095253" class="btn">Call Now</a>
+        <div class="grid-3" style="margin-top: 50px;">
+            <div class="card" style="background: #222;">
+                <h4>Call or Text</h4>
+                <p style="margin-top: 10px;">(484) 809-5253</p>
             </div>
-            <div class="sp-item">
-                <strong>Email Inquiry</strong>
-                <p>info@renschlerrentals.com</p>
-                <a href="mailto:info@renschlerrentals.com" class="btn">Email Us</a>
+            <div class="card" style="background: #222;">
+                <h4>Email</h4>
+                <p style="margin-top: 10px;">info@renschlerrentals.com</p>
+            </div>
+            <div class="card" style="background: #222;">
+                <h4>Operating</h4>
+                <p style="margin-top: 10px;">Nationwide</p>
             </div>
         </div>
-    </section>
-</main>
+        
+        <a href="tel:4848095253" class="btn">Click to Call Now</a>
+    </div>
+</section>
 
 <footer>© Renschler Rentals LLC 2026</footer>
-
 </body>
 </html>
