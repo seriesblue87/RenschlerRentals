@@ -82,7 +82,7 @@ nav ul li a {
 .hero h1 { font-size: 54px; font-weight: 300; }
 
 .hero p {
-  margin-top: -5px; /* Moved UP as requested */
+  margin-top: -15px; /* Moved UP as requested */
   font-size: 18px;
   opacity: 0.8;
 }
