@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Renschler Rentals LLC</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        .gallery-wrap { padding: 150px 60px 80px; text-align: center; }
+        .gallery-wrap h1 { font-weight: 300; margin-bottom: 40px; }
+        .g-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        .g-item { height: 350px; background: #1a1a1a; border: 1px solid #222; overflow: hidden; }
+        .g-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.5s; }
+        .g-item:hover img { opacity: 1; transform: scale(1.05); }
+        @media (max-width: 600px) { .gallery-wrap { padding: 120px 20px; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>Renschler Rentals LLC</h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+    </label>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="consultation.html">Consultation</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="gallery-wrap">
+    <h1>Our Properties</h1>
+    <div class="g-grid">
+        <div class="g-item"><img src="property1.jpg" alt="Luxury Rental"></div>
+        <div class="g-item"><img src="property2.jpg" alt="Luxury Rental"></div>
+        <div class="g-item"><img src="property3.jpg" alt="Luxury Rental"></div>
+    </div>
+</div>
+
+<footer>© Renschler Rentals LLC 2026</footer>
+
+</body>
+</html>
