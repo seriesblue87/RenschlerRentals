@@ -5,18 +5,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif; /* Back to your original font */
+  font-family: Arial, sans-serif;
 }
 
 body {
   background: #0f0f0f;
   color: white;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* =========================================
-   2. NAVIGATION (Restored Original Style)
+   2. NAVIGATION (Solid Black Version)
    ========================================= */
 nav {
   position: fixed;
@@ -25,77 +24,51 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px; /* Restored original padding */
-  background: rgba(0,0,0,0.4); /* Restored original color */
-  backdrop-filter: blur(10px);
+  padding: 20px 60px;
+  background: #000000; /* Solid Black */
   z-index: 1000;
 }
 
-nav h1 { 
-  font-size: 18px; /* Restored original size */
-  letter-spacing: 2px; /* Restored original spacing */
+nav h1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* --- HAMBURGER LOGIC --- */
+.menu-toggle {
+  display: none; /* Keep the actual checkbox hidden */
+}
+
+.hamburger {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
 }
 
 nav ul {
   display: flex;
-  gap: 25px; /* Restored original gap */
+  gap: 25px;
   list-style: none;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 14px; /* Restored original size */
+  font-size: 14px;
   opacity: 0.8;
-  transition: 0.3s;
-}
-
-nav ul li a:hover { opacity: 1; }
-
-/* Hamburger Menu Logic (Keep for mobile) */
-.menu-toggle { display: none; }
-.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-.hamburger span { width: 25px; height: 2px; background: white; transition: 0.3s; }
-
-/* =========================================
-   3. LAYOUT & COMPONENTS
-   ========================================= */
-.section-padding { padding: 100px 60px; }
-
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 25px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover { background: white; color: black; }
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.card {
-  padding: 30px;
-  background: #1a1a1a;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: black;
-  font-size: 12px;
-  opacity: 0.6;
 }
 
 /* =========================================
-   4. HERO & SUBPAGES
+   3. HERO SECTION
    ========================================= */
 .hero {
   height: 100vh;
@@ -107,39 +80,53 @@ footer {
 }
 
 .hero h1 { font-size: 54px; font-weight: 300; }
-.hero p { margin-top: -10px; font-size: 18px; opacity: 0.8; }
 
-.subpage-header {
-  padding: 150px 60px 40px; /* Ensures content starts below Nav */
-  text-align: left;
+.hero p {
+  margin-top: -5px; /* Moved UP as requested */
+  font-size: 18px;
+  opacity: 0.8;
 }
 
 /* =========================================
-   5. MOBILE RESPONSIVENESS
+   4. MOBILE STYLES (Max-width 900px)
    ========================================= */
 @media (max-width: 900px) {
-  nav { padding: 20px; }
-  .hamburger { display: flex; }
-  
-  nav ul {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background: rgba(0,0,0,0.95);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
+  nav {
+    padding: 20px;
   }
 
-  .menu-toggle:checked ~ ul { right: 0; }
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+
+  nav ul {
+    position: fixed;
+    top: 70px; /* Sits right under the black nav bar */
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    gap: 30px;
+    
+    /* Hide the menu by default */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* When the checkbox is checked, show the menu */
+  .menu-toggle:checked ~ ul {
+    max-height: 500px; /* Allow it to expand */
+    opacity: 1;
+  }
+
+  /* Animate hamburger to an 'X' */
   .menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
   .menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  .grid-3 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 36px; }
-  .section-padding, .subpage-header { padding: 120px 20px 40px; }
 }
