@@ -164,3 +164,7 @@ footer {
   
   .section-padding { padding: 60px 5%; }
 }
+
+.hero-content {
+    transform: translateY(-60px);
+}
