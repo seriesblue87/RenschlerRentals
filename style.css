@@ -175,7 +175,9 @@ footer {
 .hero-content {
     transform: translateY(-60px);
 }
-
+footer {
+    margin-top: auto;
+}
 
 
 
