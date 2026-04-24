@@ -234,9 +234,8 @@ footer {
   width: 90%;
   max-width: 520px;
 
-  height: 360px;           /* controlled crop window */
-  object-fit: cover;       /* keeps crop clean */
-  object-position: center 20%; /* adjusts face positioning */
+  height: auto;          /* removed fixed crop height */
+  object-fit: contain;   /* shows full image, no cropping */
 
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
