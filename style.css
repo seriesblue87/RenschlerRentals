@@ -225,13 +225,23 @@ footer {
 }
 
 .contact-image {
-  width: 100%;
-  max-width: 400px;   /* makes it smaller */
-  height: 250px;      /* forces crop area */
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  padding: 0 5%;
+  width: 100%;
+}
+
+
+.contact-image img {
+  width: 90%;
+  max-width: 550px;   /* bigger than before */
+  height: 320px;      /* slightly taller */
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 
