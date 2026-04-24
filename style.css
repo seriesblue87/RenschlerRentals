@@ -224,5 +224,19 @@ footer {
     url('airbnb.jpg') center/cover no-repeat;
 }
 
+.contact-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0 5%;
+}
 
+.contact-image img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
