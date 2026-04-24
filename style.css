@@ -179,13 +179,10 @@ footer {
 }
 
 
-.services-page .subpage-header {
+.services-page {
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('airbnb.jpg') center/cover no-repeat;
-
-  padding: 180px 5% 60px;
-  text-align: center;
 }
 
 .contact-page {
