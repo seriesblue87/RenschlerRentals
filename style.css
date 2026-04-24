@@ -182,7 +182,7 @@ footer {
 
 .services-page .subpage-header {
   background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('airbnb.jpg') center/cover no-repeat;
 
   padding: 180px 5% 60px;
