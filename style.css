@@ -190,14 +190,14 @@ footer {
 
 .contact-page {
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('airbnb.jpg') center/cover no-repeat;
 
   background-attachment: scroll;
 }
 .gallery-page {
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('airbnb.jpg') center/cover no-repeat;
 
   background-attachment: scroll;
@@ -206,7 +206,7 @@ footer {
 
 .consultation-page {
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('airbnb.jpg') center/cover no-repeat;
 
   background-attachment: scroll;
