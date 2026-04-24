@@ -188,6 +188,37 @@ footer {
   background-attachment: scroll;
 }
 
+.contact-page {
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url('airbnb.jpg') center/cover no-repeat;
+
+  background-attachment: scroll;
+}
+.gallery-page {
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url('airbnb.jpg') center/cover no-repeat;
+
+  background-attachment: scroll;
+}
+
+
+.consultation-page {
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url('airbnb.jpg') center/cover no-repeat;
+
+  background-attachment: scroll;
+}
+
+
+
+
+
+
+
+
 .home-page .hero {
   height: 100vh;
 
