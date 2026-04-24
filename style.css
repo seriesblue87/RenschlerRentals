@@ -235,13 +235,11 @@ footer {
 
 .contact-image img {
   width: 90%;
-  max-width: 600px;
+  max-width: 520px;
 
-  aspect-ratio: 16 / 10;  /* keeps consistent shape */
-  height: auto;           /* removes forced distortion */
-
-  object-fit: cover;
-  object-position: center;
+  height: 360px;           /* controlled crop window */
+  object-fit: cover;       /* keeps crop clean */
+  object-position: center 20%; /* adjusts face positioning */
 
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
