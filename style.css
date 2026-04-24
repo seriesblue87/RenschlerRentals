@@ -17,7 +17,7 @@ body {
     flex-direction: column;
 
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('airbnb.jpg') center/cover no-repeat fixed;
+    url('airbnb.jpg') center/cover no-repeat;
 
     color: white;
     line-height: 1.6;
