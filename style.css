@@ -234,9 +234,13 @@ footer {
 
 .contact-image img {
   width: 100%;
-  max-width: 800px;
+  max-width: 400px;   /* makes it smaller */
+  height: 250px;      /* forces crop area */
+  
+  object-fit: cover;  /* crops edges instead of stretching */
+  object-position: center;
+
   border-radius: 12px;
-  object-fit: cover;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
