@@ -238,6 +238,30 @@
 
 </form>
         <!-- FORM END -->
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop default submit temporarily
+
+    const form = this;
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.style.display = "none"; // hide form
+            document.getElementById("success-message").style.display = "block";
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    }).catch(() => {
+        alert("Something went wrong. Please try again.");
+    });
+});
+</script>
 <div id="success-message" style="display:none; text-align:center; padding:40px;">
     <h2>Submission Received ✅</h2>
     <p>Thank you! Your property intake form has been submitted.</p>
