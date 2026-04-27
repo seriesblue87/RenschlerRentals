@@ -255,25 +255,3 @@ input:-webkit-autofill:active {
     transition: background-color 9999s ease-in-out 0s !important;
 }
 
-/* FORM LABEL HEADERS ONLY */
-form label {
-    display: block;
-    margin: 18px 0 6px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Optional subtle accent line effect */
-form label::after {
-    content: "";
-    display: block;
-    width: 35px;
-    height: 2px;
-    margin-top: 5px;
-    background: linear-gradient(90deg, #7c5cff, transparent);
-    border-radius: 2px;
-    opacity: 0.6;
-}
