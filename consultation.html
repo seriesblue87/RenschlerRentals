@@ -239,11 +239,43 @@
 
 </form>
         <!-- FORM END -->
-
+        
+<!-- SUCCESS MESSAGE -->
+        <div id="success-message" style="display:none; text-align:center; padding:40px;">
+            <h2>Submission Received ✅</h2>
+            <p>Thank you! Your property intake form has been submitted.</p>
+            <p>You will hear back within <strong>24 hours</strong>.</p>
+        </div>
 
     </div>
 </section>
 
 <footer>© 2026 Renschler Rentals LLC</footer>
+
+<!-- SUBMISSION SCRIPT -->
+<script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.style.display = "none";
+            document.getElementById("success-message").style.display = "block";
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    }).catch(() => {
+        alert("Something went wrong. Please try again.");
+    });
+});
+</script>
 </body>
 </html>
