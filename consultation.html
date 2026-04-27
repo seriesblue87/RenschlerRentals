@@ -231,42 +231,15 @@
     <textarea name="goals"
         placeholder="What are your goals? (passive income, vacancy reduction, stability, etc.)" required></textarea>
 
-    <label>Upload Property Images (optional)</label>
-    <input type="file" name="images" multiple accept="image/*">
+    <label>Property Listing Link (with images if applicable) - Optional</label>
+     <textarea name="property_link"
+        placeholder="Put your current property listing link here"></textarea>
 
     <button type="submit" class="btn">Submit Property for Analysis</button>
 
 </form>
         <!-- FORM END -->
-<script>
-document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault(); // stop default submit temporarily
 
-    const form = this;
-
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            form.style.display = "none"; // hide form
-            document.getElementById("success-message").style.display = "block";
-        } else {
-            alert("Something went wrong. Please try again.");
-        }
-    }).catch(() => {
-        alert("Something went wrong. Please try again.");
-    });
-});
-</script>
-<div id="success-message" style="display:none; text-align:center; padding:40px;">
-    <h2>Submission Received ✅</h2>
-    <p>Thank you! Your property intake form has been submitted.</p>
-    <p>You will hear back within <strong>24 hours</strong>.</p>
-</div>
 
     </div>
 </section>
