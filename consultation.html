@@ -5,7 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultation | Renschler Rentals LLC</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- FORM STYLE IMPROVEMENTS -->
+    <style>
+        form {
+            margin-top: 50px;
+            display: grid;
+            gap: 14px;
+            text-align: left;
+            background: #111;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
+        }
+
+        form h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: 0.2s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #555;
+            background: #222;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        label {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        button.btn {
+            margin-top: 10px;
+        }
+
+        ::placeholder {
+            color: #888;
+        }
+    </style>
+
 </head>
+
 <body class="consultation-page">
 
 <nav>
@@ -61,11 +119,10 @@
 
         <a href="tel:4848095253" class="btn">Free Consultation</a>
 
-        <!-- ✅ FORM START -->
-        <form action="https://formspree.io/f/mzdylbqe" method="POST"
-              style="margin-top: 50px; display: grid; gap: 15px; text-align: left;">
+        <!-- FORM START -->
+        <form action="https://formspree.io/f/mzdylbqe" method="POST">
 
-            <h3 style="text-align:center; margin-bottom:10px;">Property Intake Form</h3>
+            <h3>Property Intake Form</h3>
 
             <input type="text" name="full_name" placeholder="Full Name" required>
 
@@ -97,19 +154,19 @@
 
             <input type="text" name="availability_date" placeholder="When is it available?">
 
-            <textarea name="property_details" rows="4"
+            <textarea name="property_details"
                 placeholder="Tell me about the property (condition, upgrades, parking, amenities, etc.)"></textarea>
 
-            <textarea name="goals" rows="3"
-                placeholder="What are your goals? (passive income, filling vacancy, stability, etc.)"></textarea>
+            <textarea name="goals"
+                placeholder="What are your goals? (passive income, vacancy reduction, stability, etc.)"></textarea>
 
-            <label style="opacity:0.8;">Upload Property Images (optional)</label>
+            <label>Upload Property Images (optional)</label>
             <input type="file" name="images" multiple accept="image/*">
 
             <button type="submit" class="btn">Submit Property for Analysis</button>
 
         </form>
-        <!-- ✅ FORM END -->
+        <!-- FORM END -->
 
     </div>
 </section>
