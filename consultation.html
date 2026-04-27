@@ -26,13 +26,20 @@
             font-size: 20px;
         }
 
+        /* FORCE ALL TEXT TO WHITE */
+        form,
+        form input,
+        form select,
+        form textarea {
+            color: #fff;
+        }
+
         input, select, textarea {
             width: 100%;
             padding: 12px 14px;
             border-radius: 8px;
             border: 1px solid #333;
             background: #1a1a1a;
-            color: #fff;
             font-size: 14px;
             outline: none;
             transition: 0.2s ease;
@@ -51,10 +58,21 @@
         label {
             font-size: 13px;
             opacity: 0.8;
+            color: #fff;
         }
 
+        /* DARK PREMIUM BUTTON */
         button.btn {
             margin-top: 10px;
+            background: #0b0b0b;
+            color: #ffffff;
+            border: 1px solid #2a2a2a;
+            transition: 0.2s ease;
+        }
+
+        button.btn:hover {
+            background: #1a1a1a;
+            cursor: pointer;
         }
 
         ::placeholder {
